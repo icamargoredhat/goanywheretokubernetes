@@ -25,6 +25,7 @@ spec:
       labels:
         io.kompose.service: mft
     spec:
+      serviceAccount: cuentadeservicio
       containers:
         - image: helpsystems/goanywhere-mft:latest
           name: goanywhere-mft
