@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-      serviceAccount: icamargo
     kompose.cmd: kompose convert
     kompose.version: 1.22.0 (955b78124)
   creationTimestamp: null
