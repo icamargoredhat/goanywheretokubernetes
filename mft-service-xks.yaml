@@ -1,0 +1,172 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mft
+spec:
+  type: LoadBalancer
+  selector:
+    app: mft
+  ports:
+  - name: "8000"
+    port: 8000
+    targetPort: 8000
+  - name: "8001"
+    port: 8001
+    targetPort: 8001
+  - name: "8005"
+    port: 8005
+    targetPort: 8005
+  - name: "8006"
+    port: 8006
+    targetPort: 8006
+  - name: "8009"
+    port: 8009
+    targetPort: 8009
+  - name: "8010"
+    port: 8010
+    targetPort: 8010
+  - name: "8443"
+    port: 8443
+    targetPort: 8443
+  - name: "8021"
+    port: 8021
+    targetPort: 8021
+  - name: "8990"
+    port: 8990
+    targetPort: 8990
+  - name: "8022"
+    port: 8022
+    targetPort: 8022
+  - name: "6330"
+    port: 6330
+    targetPort: 6330
+  - name: "32001"
+    port: 32001
+    targetPort: 32001
+  - name: "32002"
+    port: 32002
+    targetPort: 32002
+  - name: "32003"
+    port: 32003
+    targetPort: 32003
+  - name: "32004"
+    port: 32004
+    targetPort: 32004
+  - name: "32005"
+    port: 32005
+    targetPort: 32005
+  - name: "32006"
+    port: 32006
+    targetPort: 32006
+  - name: "32007"
+    port: 32007
+    targetPort: 32007
+  - name: "32008"
+    port: 32008
+    targetPort: 32008
+  - name: "32009"
+    port: 32009
+    targetPort: 32009
+  - name: "32010"
+    port: 32010
+    targetPort: 32010
+  - name: "32011"
+    port: 32011
+    targetPort: 32011
+  - name: "32012"
+    port: 32012
+    targetPort: 32012
+  - name: "32013"
+    port: 32013
+    targetPort: 32013
+  - name: "32014"
+    port: 32014
+    targetPort: 32014
+  - name: "32015"
+    port: 32015
+    targetPort: 32015
+  - name: "32016"
+    port: 32016
+    targetPort: 32016
+  - name: "32017"
+    port: 32017
+    targetPort: 32017
+  - name: "32018"
+    port: 32018
+    targetPort: 32018
+  - name: "32019"
+    port: 32019
+    targetPort: 32019
+  - name: "32020"
+    port: 32020
+    targetPort: 32020
+  - name: "32021"
+    port: 32021
+    targetPort: 32021
+  - name: "32022"
+    port: 32022
+    targetPort: 32022
+  - name: "32023"
+    port: 32023
+    targetPort: 32023
+  - name: "32024"
+    port: 32024
+    targetPort: 32024
+  - name: "32025"
+    port: 32025
+    targetPort: 32025
+  - name: "32026"
+    port: 32026
+    targetPort: 32026
+  - name: "32027"
+    port: 32027
+    targetPort: 32027
+  - name: "32028"
+    port: 32028
+    targetPort: 32028
+  - name: "32029"
+    port: 32029
+    targetPort: 32029
+  - name: "32030"
+    port: 32030
+    targetPort: 32030
+  - name: "32031"
+    port: 32031
+    targetPort: 32031
+  - name: "32032"
+    port: 32032
+    targetPort: 32032
+  - name: "32033"
+    port: 32033
+    targetPort: 32033
+  - name: "32034"
+    port: 32034
+    targetPort: 32034
+  - name: "32035"
+    port: 32035
+    targetPort: 32035
+  - name: "32036"
+    port: 32036
+    targetPort: 32036
+  - name: "32037"
+    port: 32037
+    targetPort: 32037
+  - name: "32038"
+    port: 32038
+    targetPort: 32038
+  - name: "32039"
+    port: 32039
+    targetPort: 32039
+  - name: "32040"
+    port: 32040
+    targetPort: 32040
+  - name: "32041"
+    port: 32041
+    targetPort: 32041
+  - name: "32042"
+    port: 32042
+    targetPort: 32042
+  - name: "32043"
+    port: 32043
+    targetPort: 32043
+  
