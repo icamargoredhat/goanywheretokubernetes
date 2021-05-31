@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mft
+spec:
+  type: LoadBalancer
+  selector:
+    app: mft
+  ports:
+  - name: manage1
+    port: 8000
+    targetPort: 8000
+  - name: manage2
+    port: 8001
+    targetPort: 8001
+  
