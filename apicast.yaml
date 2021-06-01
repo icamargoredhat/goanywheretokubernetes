@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: apicast-oracle
-        image: registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:latest
+        image: magdamartinez/apicast:latest
         ports:
         - containerPort: 8080
           name: proxy
@@ -28,4 +28,22 @@ spec:
             secretKeyRef:
               name: apicast-configuration-url-secret
               key: AdminPortalURL
-   
+--- 
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: apicast-oracle
+spec:
+  type: LoadBalancer
+  selector:
+    app: apicast-oracle
+  ports:
+  - name: proxy
+    port: 8080
+    targetPort: 8080
+  - name: management
+    port: 8090
+    targetPort: 8090
+
+
