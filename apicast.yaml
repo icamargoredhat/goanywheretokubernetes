@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: apicast-oracle
-        image: registry.redhat.io/3scale-amp2/apicast-gateway-rhel8
+        image: registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:latest
         ports:
         - containerPort: 8080
           name: proxy
@@ -28,5 +28,4 @@ spec:
             secretKeyRef:
               name: apicast-configuration-url-secret
               key: AdminPortalURL
-      imagePullSecrets:
-        - name: 6340056-achpoc-pull-secret
+   
