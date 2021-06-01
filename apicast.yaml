@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apicast-oracle
+  labels:
+    app: apicast-oracle
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apicast-oracle
+  template:
+    metadata:
+      labels:
+        app: apicast-oracle
+    spec:
+      containers:
+      - name: apicast-oracle
+        image: registry.redhat.io/3scale-amp2/apicast-gateway-rhel8
+        ports:
+        - containerPort: 8080
+          name: proxy
+        - containerPort: 8090
+          name: management
+        env:
+        - name: THREESCALE_PORTAL_ENDPOINT
+          valueFrom:
+            secretKeyRef:
+              name: apicast-configuration-url-secret
+              key: AdminPortalURL
