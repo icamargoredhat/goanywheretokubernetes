@@ -28,3 +28,5 @@ spec:
             secretKeyRef:
               name: apicast-configuration-url-secret
               key: AdminPortalURL
+      imagePullSecrets:
+        - name: 6340056-achpoc-pull-secret
