@@ -23,35 +23,5 @@ spec:
           name: management1
         - containerPort: 8001
           name: management2
-        resources: 
-        volumeMounts:
-          - mountPath: /usr/local/HelpSystems/GoAnywhere/userdata/
-            name: userdata
-          - mountPath: /usr/local/HelpSystems/GoAnywhere/config/
-            name: configdir
-      restartPolicy: Always
-      volumes:
-        - name: userdata
-          persistentVolumeClaim:
-            claimName: userdata
-        - name: configdir
-          persistentVolumeClaim:
-            claimName: configdir
+        resources: {}
 
---- 
-
-kind: Service
-apiVersion: v1
-metadata:
-  name: mft
-spec:
-  type: LoadBalancer
-  selector:
-    app: mft
-  ports:
-  - name: management1
-    port: 8000
-    targetPort: 8000
-  - name: management2
-    port: 8001
-    targetPort: 8001
