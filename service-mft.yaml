@@ -13,3 +13,9 @@ spec:
   - name: management2
     port: 8001
     targetPort: 8001
+  - name: sftp
+    port: 8022
+    targetPort: 8022
+  - name: https
+    port: 8443
+    targetPort: 8443
