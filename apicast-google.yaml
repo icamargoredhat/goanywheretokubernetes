@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apicast-google
+  labels:
+    app: apicast-google
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apicast-google
+  template:
+    metadata:
+      labels:
+        app: apicast-google
+    spec:
+      containers:
+      - name: apicast-google
+        image: magdamartinez/apicast:latest
+        ports:
+        - containerPort: 8080
+          name: proxy
+        - containerPort: 8090
+          name: management
+        env:
+        - name: THREESCALE_PORTAL_ENDPOINT
+          valueFrom:
+            secretKeyRef:
+              name: apicast-configuration-url-secret
+              key: AdminPortalURL
+--- 
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: apicast-google
+spec:
+  type: LoadBalancer
+  selector:
+    app: apicast-google
+  ports:
+  - name: proxy
+    port: 8080
+    targetPort: 8080
+  - name: management
+    port: 8090
+    targetPort: 8090
