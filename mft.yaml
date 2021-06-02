@@ -23,7 +23,7 @@ spec:
           name: management1
         - containerPort: 8001
           name: management2
-        resources: {}
+        resources: 
         volumeMounts:
           - mountPath: /usr/local/HelpSystems/GoAnywhere/userdata/
             name: userdata
