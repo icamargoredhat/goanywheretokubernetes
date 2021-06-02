@@ -23,12 +23,12 @@ spec:
           name: management1
         - containerPort: 8001
           name: management2
-       resources: {}
-          volumeMounts:
-            - mountPath: /usr/local/HelpSystems/GoAnywhere/userdata/
-              name: userdata
-            - mountPath: /usr/local/HelpSystems/GoAnywhere/config/
-              name: configdir
+        resources: {}
+        volumeMounts:
+          - mountPath: /usr/local/HelpSystems/GoAnywhere/userdata/
+            name: userdata
+          - mountPath: /usr/local/HelpSystems/GoAnywhere/config/
+            name: configdir
       restartPolicy: Always
       volumes:
         - name: userdata
@@ -37,7 +37,6 @@ spec:
         - name: configdir
           persistentVolumeClaim:
             claimName: configdir
-status: {}
 
 --- 
 
