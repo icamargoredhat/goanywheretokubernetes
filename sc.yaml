@@ -1,0 +1,20 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: oci
+  annotations:
+    storageclass.beta.kubernetes.io/is-default-class: "true"
+provisioner: oracle.com/oci
+parameters:
+volumeBindingMode: WaitForFirstConsumer
+allowedTopologies:
+- matchLabelExpressions:
+  - key:  failure-domain.beta.kubernetes.io/zone
+    values:
+    - US-ASHBURN-AD-1
+    - US-ASHBURN-AD-2
+    - US-ASHBURN-AD-3
+
+  
+    
+ 
