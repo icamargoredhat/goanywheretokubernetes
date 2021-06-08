@@ -1,8 +1,6 @@
 # goanywheretoopenshift
 <img src="./goanywhere-logo-400x150.png" width="500" alt="goanywherelogoo"/>
 
-This repo was created to simplify the installation and configuration process of GoAnywhere over Kubernetes. This include some necessary yaml files to create GoAnywhere MFT Platform.
-
 <img src="./GoAnywhereMFT_Gateway_OneGateway_full.png" width="1000" alt="goanywherelogo2"/>
 
 1. Considerations.
